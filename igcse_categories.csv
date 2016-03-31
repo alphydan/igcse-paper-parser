@@ -1,0 +1,21 @@
+Name,Section,SubSection,SubName,key1,key2,key3,key4,key5,key6,key7
+Forces,S1,b,Movement,journey,velocity-time,distance-time,distance traveled,friction,velocity,deceleration
+Forces,S1,c,Forces,hooke,momentum,terminal velocity,acceleration,resultant force,moment,force
+Forces,S1,d,Astronomy,planet,galaxy,mars,satellite,universe,moon,earth
+Electricity,S2,b,Mains Electricity,plug,plugs,kettle,electric socket,fuse,safety,earth
+Electricity,S2,c,Energy and Potential diff,circuit,resistor,thermistor,voltage,current,power,battery
+Electricity,S2,d,Electric Charge,insulators,electrostatic,charges,printers,fuelling,charge,electrons
+Waves,S3,b,Wave Properties,amplitude,wavelength,transverse,longitudinal,waves,frequency,period
+Waves,S3,c,E.M. Spectrum,visible,violet,radio,gamma,microwaves,cancer,electromagnetic
+Waves,S3,d,Light and Sound,incidence,refraction,index,ray,reflection,critical,angle
+Energy,S4,b,Energy transfer,energy,temperature,kinetic,conduction,efficiency,potential,speed
+Energy,S4,c,Work and power,force,work,power,gravitational,transferred,work done,distance
+Energy,S4,d,E. Resources and Electricity generation,wind,solar,fossil,generation,cells,hydro,energy
+States of Matter,S5,b,Density and pressure,density,mass,volume,pressure,area,force,floor
+States of Matter,S5,c,Change of state,melts,solid,liquid,molecules,particles,evaporates,motion
+States of Matter,S5,d,Ideal gas,kelvin,zero,container,brownian,pressure,temperature,constant
+Magnetism,S6,b,Magnetism,lines,attract,magnet,hard,soft,uniform,field
+Magnetism,S6,c,Electromagnetism,magnetic field,loudspeaker,straight wire,solenoid,motor,left hand,perpendicular
+Magnetism,S6,d,Electromagnetic Induction,force,wire,fleming,hand,motor,coils,transformer
+Particles,S7,b,Radioactivity,isotope,alpha,gamma,beta,nucleus,half-life,becquerel
+Particles,S7,c,Particles,gold,foil,alpha,uranium,neutrons,rods,moderator
