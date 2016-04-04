@@ -8,10 +8,10 @@ So the 2007 exam may be broken into 10 different PDFs, each one going to the cor
 
 ## Strategy:
 
-1. Read a paper and find the page numbers for each problem (see. [paperparse.py](paperparse.py)
-2. Import the keywords for each category
-3. Give each problem a score for each category (for example, it seems to belong to Waves (score = 3), but not to Forces (score=1))
-4. Name the paper according to the chosen category and save it in the relevant directory.
+1. Read a paper and find the page numbers for each problem (cf. [paperparse.py](paperparse.py) )
+2. Import the keywords for each category (cf. [igcse_categories.csv](igcse_categories.csv))
+3. Give each problem a score for each category (for example, it seems to belong to Waves (score = 3), but not to Forces (score=1)) (cf. [problem_classifier.py](problem_classifier.py))
+4. Name the paper according to the chosen category and save it in the relevant directory (cf. [paper_classifier.py](paper_classifier.py))
 
 We use a few simplifying assumptions:
     - A new question always starts on a new page
@@ -22,9 +22,9 @@ We use a few simplifying assumptions:
 
 ## Requirements
 
-You will need pyPDF which you can install with:
+You will need [`python`](https://www.python.org/) and pyPDF which you can install with:
 
 ```
-    pip install pypdf
+    pip install pyPDF
 ```
 

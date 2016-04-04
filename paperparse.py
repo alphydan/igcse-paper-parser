@@ -8,14 +8,14 @@ def last_page(current_problem, contents):
     ends on this page.  Question N ends here if the string
     "QN(Total" is found on the page.
     '''
-    end_of_question_string = 'Q%d(Total' % current_problem
+    end_of_question_string = '(Total'
     if end_of_question_string in contents[0]:
         return True
     else:
         return False
 
 
-def parse_paper_pages(paper_name):
+def parse_paper_pages(paper_name, verbose=False):
     '''
     This function opens a PDF and finds which pages
     correspond to each problem returning a dictionary
@@ -42,9 +42,12 @@ def parse_paper_pages(paper_name):
     for pg in range(0, nr_of_pages):
 
         contents = pdf.getPage(pg).extractText().split('\n')
+        if verbose:
+            print contents
+            print '-#---------------#----------#----------#------------#--', '\n\n\n'
 
         # Does this page contain Q1?
-        if (current_problem == 0) and (' 1.' in contents[0]):
+        if (current_problem == 0) and ('1.' in contents[0]):
             print 'p.', pg+1, ' -> start of question 1'
             current_problem = 1  # Q1 found. Disregard next '1.' strings
             pages_of_problems[1][0] = pg
@@ -61,13 +64,15 @@ def parse_paper_pages(paper_name):
                 # was this first page also the last page?
                 if last_page(current_problem, contents):
                     current_problem += 1
+                    print 'THIS IS THE LAST PAGE'
 
-        elif current_problem >= 1:
+        if current_problem >= 1:
             # We have the first page, but not the last one
             if last_page(current_problem, contents):
                 # if it's the last page, move on to next problem
                 pages_of_problems[current_problem].append(pg)
                 current_problem += 1
+                print 'THIS IS THE LAST PAGE'
 
             elif current_problem > 1:
                 pages_of_problems[current_problem].append(pg)
@@ -83,9 +88,7 @@ def parse_paper_pages(paper_name):
     return all_problems
 
 
-
-
-def write_problem2PDF(pdf_in, pdf_out, pb_nr, pb_dictionary):
+def write_problem2PDF(pdf_in, pdf_out, page_list):
     '''
     Takes a PDF and outputs one with just the selected pages
     from a selected problem
@@ -95,11 +98,32 @@ def write_problem2PDF(pdf_in, pdf_out, pb_nr, pb_dictionary):
 
     output = PdfFileWriter()
 
-    pb_pg_list = pb_dictionary[pb_nr]
-    for pb_pg in pb_pg_list:
-        output.addPage(pdf_in.getPage(pg_pg))
+    for pb_pg in page_list:
+        output.addPage(pdf.getPage(pb_pg))
     # finally, write "output" to document-output.pdf
     outputStream = file(pdf_out, "wb")
     output.write(outputStream)
-    print 'pages %s from PDF %s have been printed to %s' % (pb_pg_list, pdf_in, pdf_out)
+    print 'pages %s from PDF %s have been printed to %s' % (page_list, pdf_in, pdf_out)
     return None
+
+
+def get_problem_string(paper_name, page_list):
+    '''
+    This function opens a PDF and returns the string
+    corresponding to the given page list.
+    '''
+
+    f = open(paper_name, 'rb')
+    pdf = PdfFileReader(f)
+
+    problem_string = ''
+    for pg in page_list:
+        contents = str(pdf.getPage(pg).extractText().encode('ascii', 'ignore'))
+        problem_string += contents
+
+    return problem_string
+
+
+# all_pb = parse_paper_pages('papers/2007-11-6-HL.pdf')
+# print all_pb
+# pb_string = get_problem_string('papers/2007-11-6-HL.pdf', [5,6])
