@@ -2,13 +2,6 @@
 import csv
 import operator
 
-test_string = '(b) (i) State the equation which relates the acceleration of \
-free fall g, gravitational potential energy, height and mass.    .............\
-.............................(1)  (ii) Calculate the maximum change in \
-height in metres reached by the ball. Maximum height =  ...m \
-(iii) What assumption did you make to calculate the maximum height?'
-
-
 
 def find_problem_category(pb_string):
     '''
@@ -50,3 +43,12 @@ def find_problem_category(pb_string):
     # print sorted_score
     cat.close()
     return sorted_score[0]
+
+
+
+test_string = '(b) (i) State the equation which relates the acceleration of \
+free fall g, gravitational potential energy, height and mass.    .............\
+.............................(1)  (ii) Calculate the maximum change in \
+height in metres reached by the ball. Maximum height =  ...m \
+(iii) What assumption did you make to calculate the maximum height?'
+
