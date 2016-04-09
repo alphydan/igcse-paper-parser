@@ -30,7 +30,7 @@ def find_problem_category(pb_string):
 
     score = []
     for row in cat_reader:
-        keyword_list = [row[i] for i in range(4, 11)]
+        keyword_list = [row[i] for i in range(4, 13)]
         temp_score = 0
         for key in keyword_list:
             if key in pb_string:
@@ -45,7 +45,8 @@ def find_problem_category(pb_string):
         # print keyword_list
         # print temp_score, directory1,'/',directory2, '---', paper_name_end, '\n'
 
-
-    sorted_score = sorted(score, key=lambda s: s[0], reverse=True)  # sorted from top score to low score
+    # sorted from top score to low score
+    sorted_score = sorted(score, key=lambda s: s[0], reverse=True)
+    # print sorted_score
     cat.close()
     return sorted_score[0]
