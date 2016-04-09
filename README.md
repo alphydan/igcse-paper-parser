@@ -28,3 +28,4 @@ You will need [`python`](https://www.python.org/) and pyPDF which you can instal
     pip install pyPDF
 ```
 
+This script also uses the linux command line utility `pdftotext` which can be installed on [mac](http://superuser.com/questions/56272/is-the-pdftotext-command-line-tool-for-mac) and [windows](http://www.foolabs.com/xpdf/download.html)

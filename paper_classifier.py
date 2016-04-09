@@ -8,7 +8,7 @@ import os
 from pyPdf import PdfFileReader, PdfFileWriter
 
 # Local Imports
-from new_paperparse import paperparse, write_problem2PDF, get_problem_string
+from paperparse import paperparse, write_problem2PDF, get_problem_string
 from problem_classifier import find_problem_category
 # from igcse_topics import classification
 
@@ -18,9 +18,6 @@ path = 'papers/'
 list_of_papers = sorted(os.listdir(path))
 
 
-print list_of_papers
-print list_of_papers[2], '\n\n'
-paper_name = 'papers/%s' % list_of_papers[2]
 
 def split_paper(paper_name):
     root_paper_name = paper_name.split('/')[1].split('.pdf')[0]
@@ -36,5 +33,10 @@ def split_paper(paper_name):
         print pdf_out
         write_problem2PDF(paper_name, pdf_out, all_problems[pb_nr])
 
-split_paper(paper_name)
 
+print list_of_papers, '\n\n'
+print len(list_of_papers)
+
+for paper_nr in range(0, len(list_of_papers)):
+    paper_name = 'papers/%s' % list_of_papers[10]
+    split_paper(paper_name)

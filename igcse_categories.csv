@@ -7,7 +7,7 @@ Electricity,S2,c,Energy and Potential diff,circuit,resistor,thermistor,voltage,c
 Electricity,S2,d,Electric Charge,insulators,electrostatic,friction,printers,fueling,charge,electrons,spark,shock
 Waves,S3,b,Wave Properties,amplitude,wavelength,transverse,longitudinal,waves,frequency,period,wave,oscilloscope
 Waves,S3,c,E.M. Spectrum,visible,violet,radio,gamma,microwaves,cancer,electromagnetic,X-ray,microwave
-Waves,S3,d,Light and Sound,incidence,refraction,index,ray,reflection,critical,angle,refractive,eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeccccccceeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+Waves,S3,d,Light and Sound,incidence,refraction,index,ray,reflection,critical,angle,refractive,mirror
 Energy,S4,b,Energy transfer,energy,temperature,kinetic,conduction,efficiency,potential,speed,power,changes
 Energy,S4,c,Work and power,force,work,power,gravitational,transferred,work done,distance,push,extract
 Energy,S4,d,E. Resources and Electricity generation,wind,solar,fossil,generation,cells,hydro,energy,tidal,renewable
@@ -17,5 +17,5 @@ States of Matter,S5,d,Ideal gas,kelvin,zero,container,brownian,pressure,temperat
 Magnetism,S6,b,Magnetism,lines,attract,magnet,hard,soft,uniform,field,magnetic,north
 Magnetism,S6,c,Electromagnetism,magnet,field,wire,solenoid,motor,left hand,cable,current,microphone
 Magnetism,S6,d,Electromagnetic Induction,force,wire,loudspeaker,hand,motor,coil,transformer,front,electricity
-Particles,S7,b,Radioactivity,isotope,alpha,gamma,beta,nucleus,half,becquerel,decay,life
+Particles,S7,b,Radioactivity,isotope,alpha,gamma,beta,nucleus,half,becquerel,decay,ionising
 Particles,S7,c,Particles,gold,reactor,alpha,uranium,neutrons,rods,moderator,bounce,chain
