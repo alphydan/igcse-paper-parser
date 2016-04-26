@@ -37,6 +37,9 @@ def split_paper(paper_name):
 print list_of_papers, '\n\n'
 print len(list_of_papers)
 
-for paper_nr in range(0, len(list_of_papers)):
-    paper_name = 'papers/%s' % list_of_papers[10]
+for paper_nr in range(15, len(list_of_papers)):
+    paper_name = 'papers/%s' % list_of_papers[paper_nr]
+    print paper_name
     split_paper(paper_name)
+
+# split_paper('papers/2010-06-2H.pdf')
