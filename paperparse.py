@@ -105,14 +105,11 @@ def paperparse(paper_name):
     for page_nr in range(3, nr_of_pages):
         current_found = 0
         page_str = read_page_string(page_nr, paper_name, old_new)
-        # print page_str
-        # print '------#----#------#------#-----', page_nr, '-------#-------#-------#---------#'
 
         if current_problem == 0 and start_of_pb1(page_str, old_new):
+            'start of 1 found'
             current_problem += 1
             pages_of_problems[1] = [page_nr]
-            # print page_str
-            # print '------#----#------#------#-----', page_nr, '-------#-------#-------#---------#'
 
             if page_has_end(page_str):
                 # Pb. 1 end on page where it starts
@@ -123,10 +120,11 @@ def paperparse(paper_name):
         if pages_of_problems.get(current_problem):
             # we already have a starting page for this problem
             current_found = 1
+
             if current_problem == 1 and page_has_end(page_str):
                 pages_of_problems[current_problem].append(page_nr)
-                print 'hello we are here', 'pagenr:', page_nr
                 current_problem += 1
+                continue # move on to problem 2
 
         # print page_str
         if current_problem > 1 and \
@@ -148,10 +146,9 @@ def paperparse(paper_name):
             if page_has_end(page_str):
                 pages_of_problems[current_problem].append(page_nr)
                 current_problem += 1
-                print current_problem, 'end', page_nr
             else:
-                print current_problem, 'no end', page_nr
-
+                pass
+                # print current_problem, 'no end', page_nr
 
 
     paper.close()
@@ -207,10 +204,9 @@ def get_problem_string(paper_name, page_list):
 
 
 # paper_name = "papers/2007-11-6H.pdf"
-paper_name = "papers/2011-06-1P.pdf"
-xxx = paperparse(paper_name)
-print xxx
+# paper_name = "papers/2011-06-1P.pdf"
 
+# paper_name = "papers/2015-06-1P.pdf"
 
-# yyy = read_page_string(3, paper_name, "new")
-# print yyy
+# xxx = paperparse(paper_name)
+# print xxx
