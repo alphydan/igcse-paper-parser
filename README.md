@@ -14,10 +14,10 @@ So the 2007 exam may be broken into 10 different PDFs, each one going to the cor
 4. Name the paper according to the chosen category and save it in the relevant directory (cf. [paper_classifier.py](paper_classifier.py))
 
 We use a few simplifying assumptions:
+
     - A new question always starts on a new page
     - A problem will be between 1 and 3 pages long
     - a Blank page is at most 1 page long.
-    - There will be at most 15 - 20 problems
     - No problem will ever be on page zero.
 
 ## Requirements
